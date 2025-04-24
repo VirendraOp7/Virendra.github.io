@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Cheat Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+    }
+    .box {
+      background-color: white;
+      border: 1px solid #999;
+      padding: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .box h3 {
+      background-color: #2a5d91;
+      color: white;
+      padding: 5px;
+      margin: -10px -10px 10px -10px;
+      font-size: 16px;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+      display: inline-block;
+      margin: 2px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center; color: #2a5d91;">HTML Cheat Sheet</h1>
+  <div class="container">
+    <div class="box">
+      <h3>HTML Basic Tags</h3>
+      <code>&lt;!DOCTYPE&gt;</code>: Defines type of the document.<br>
+      <code>&lt;html&gt;...&lt;/html&gt;</code>: Root of an HTML document.<br>
+      <code>&lt;head&gt;...&lt;/head&gt;</code>: Container for metadata.<br>
+      <code>&lt;title&gt;...&lt;/title&gt;</code>: Title for the document.<br>
+      <code>&lt;meta /&gt;</code>: Metadata like character set, etc.<br>
+      <code>&lt;base /&gt;</code>: Default URL for links.<br>
+      <code>&lt;link /&gt;</code>: Link to external sources.<br>
+      <code>&lt;style&gt;...&lt;/style&gt;</code>: CSS definitions.<br>
+      <code>&lt;script&gt;...&lt;/script&gt;</code>: Client-side scripts.<br>
+      <code>&lt;noscript&gt;...&lt;/noscript&gt;</code>: Message if scripts not supported.<br>
+      <code>&lt;body&gt;...&lt;/body&gt;</code>: Main body of document.<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Text Formatting</h3>
+      <code>&lt;p&gt;...&lt;/p&gt;</code>: Paragraph<br>
+      <code>&lt;br /&gt;</code>: Line break<br>
+      <code>&lt;hr /&gt;</code>: Horizontal Rule<br>
+      <code>&lt;b&gt;...&lt;/b&gt;</code>: Bold Text<br>
+      <code>&lt;i&gt;...&lt;/i&gt;</code>: Italic Text<br>
+      <code>&lt;small&gt;...&lt;/small&gt;</code>: Smaller Text<br>
+      <code>&lt;mark&gt;...&lt;/mark&gt;</code>: Marked / Highlighted Text<br>
+      <code>&lt;del&gt;...&lt;/del&gt;</code>: Deleted Text<br>
+      <code>&lt;ins&gt;...&lt;/ins&gt;</code>: Inserted Text<br>
+      <code>&lt;strong&gt;...&lt;/strong&gt;</code>: Important Text<br>
+      <code>&lt;em&gt;...&lt;/em&gt;</code>: Emphasized Text<br>
+      <code>&lt;sub&gt;...&lt;/sub&gt;</code>: Subscript<br>
+      <code>&lt;sup&gt;...&lt;/sup&gt;</code>: Superscript<br>
+      <code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code>: Quotation<br>
+      <code>&lt;abbr&gt;...&lt;/abbr&gt;</code>: Abbreviation<br>
+      <code>&lt;address&gt;...&lt;/address&gt;</code>: Address<br>
+      <code>&lt;bdo&gt;...&lt;/bdo&gt;</code>: Change text direction<br>
+      <code>&lt;code&gt;...&lt;/code&gt;</code>: Programming code<br>
+      <code>&lt;pre&gt;...&lt;/pre&gt;</code>: Preformatted text<br>
+      <code>&lt;samp&gt;...&lt;/samp&gt;</code>: Code sample output<br>
+      <code>&lt;kbd&gt;...&lt;/kbd&gt;</code>: Keyboard input<br>
+      <code>&lt;var&gt;...&lt;/var&gt;</code>: Variable<br>
+      <code>&lt;dfn&gt;...&lt;/dfn&gt;</code>: Definition<br>
+      <code>&lt;meter&gt;...&lt;/meter&gt;</code>: Scalar Measurement<br>
+      <code>&lt;progress&gt;...&lt;/progress&gt;</code>: Progress bar<br>
+      <code>&lt;u&gt;...&lt;/u&gt;</code>: Underlined Text<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Headings</h3>
+      <code>&lt;h1&gt;...&lt;/h1&gt;</code>: Heading One<br>
+      <code>&lt;h2&gt;...&lt;/h2&gt;</code>: Heading Two<br>
+      <code>&lt;h3&gt;...&lt;/h3&gt;</code>: Heading Three<br>
+      <code>&lt;h4&gt;...&lt;/h4&gt;</code>: Heading Four<br>
+      <code>&lt;h5&gt;...&lt;/h5&gt;</code>: Heading Five<br>
+      <code>&lt;h6&gt;...&lt;/h6&gt;</code>: Heading Six<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Comments</h3>
+      <code>&lt;!-- comment --&gt;</code>: Single Line or Multi-line comment<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Links</h3>
+      <code>&lt;a&gt;...&lt;/a&gt;</code>: Hyperlink<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Images</h3>
+      <code>&lt;img /&gt;</code>: Image<br>
+      <code>&lt;map&gt;...&lt;/map&gt;</code>: Image map<br>
+      <code>&lt;area /&gt;</code>: Clickable area in map<br>
+      <code>&lt;picture&gt;...&lt;/picture&gt;</code>: Group of images<br>
+      <code>&lt;figure&gt;...&lt;/figure&gt;</code>: Group of diagrams/figures<br>
+      <code>&lt;figcaption&gt;...&lt;/figcaption&gt;</code>: Caption<br>
+      <code>&lt;canvas&gt;...&lt;/canvas&gt;</code>: Graphics<br>
+      <code>&lt;svg&gt;...&lt;/svg&gt;</code>: SVG graphics<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Tables</h3>
+      <code>&lt;table&gt;...&lt;/table&gt;</code>: Table<br>
+      <code>&lt;tr&gt;...&lt;/tr&gt;</code>: Table row<br>
+      <code>&lt;th&gt;...&lt;/th&gt;</code>: Table header<br>
+      <code>&lt;td&gt;...&lt;/td&gt;</code>: Table cell<br>
+      <code>&lt;caption&gt;...&lt;/caption&gt;</code>: Table caption<br>
+      <code>&lt;thead&gt;...&lt;/thead&gt;</code>: Head section<br>
+      <code>&lt;tbody&gt;...&lt;/tbody&gt;</code>: Body section<br>
+      <code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code>: Footer section<br>
+      <code>&lt;colgroup&gt;...&lt;/colgroup&gt;</code>: Column group<br>
+      <code>&lt;col /&gt;</code>: Column in group<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Lists</h3>
+      <code>&lt;ul&gt;...&lt;/ul&gt;</code>: Unordered list<br>
+      <code>&lt;ol&gt;...&lt;/ol&gt;</code>: Ordered list<br>
+      <code>&lt;li&gt;...&lt;/li&gt;</code>: List item<br>
+      <code>&lt;dl&gt;...&lt;/dl&gt;</code>: Description list<br>
+      <code>&lt;dt&gt;...&lt;/dt&gt;</code>: Term<br>
+      <code>&lt;dd&gt;...&lt;/dd&gt;</code>: Description<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Forms</h3>
+      <code>&lt;form&gt;...&lt;/form&gt;</code>: HTML form<br>
+      <code>&lt;input /&gt;</code>: Input field<br>
+      <code>&lt;textarea&gt;...&lt;/textarea&gt;</code>: Multiline input<br>
+      <code>&lt;button&gt;...&lt;/button&gt;</code>: Button<br>
+      <code>&lt;select&gt;...&lt;/select&gt;</code>: Dropdown<br>
+      <code>&lt;option&gt;...&lt;/option&gt;</code>: Dropdown option<br>
+      <code>&lt;optgroup&gt;...&lt;/optgroup&gt;</code>: Option group<br>
+      <code>&lt;fieldset&gt;...&lt;/fieldset&gt;</code>: Group form fields<br>
+      <code>&lt;legend&gt;...&lt;/legend&gt;</code>: Caption for group<br>
+      <code>&lt;datalist&gt;...&lt;/datalist&gt;</code>: List of options<br>
+      <code>&lt;output&gt;...&lt;/output&gt;</code>: Output result<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Layouts</h3>
+      <code>&lt;div&gt;...&lt;/div&gt;</code>: Division<br>
+      <code>&lt;span&gt;...&lt;/span&gt;</code>: Inline container<br>
+      <code>&lt;header&gt;...&lt;/header&gt;</code>: Header section<br>
+      <code>&lt;footer&gt;...&lt;/footer&gt;</code>: Footer section<br>
+      <code>&lt;main&gt;...&lt;/main&gt;</code>: Main content<br>
+      <code>&lt;nav&gt;...&lt;/nav&gt;</code>: Navigation<br>
+      <code>&lt;section&gt;...&lt;/section&gt;</code>: Section<br>
+      <code>&lt;article&gt;...&lt;/article&gt;</code>: Article content<br>
+      <code>&lt;aside&gt;...&lt;/aside&gt;</code>: Sidebar<br>
+      <code>&lt;details&gt;...&lt;/details&gt;</code>: Collapsible content<br>
+      <code>&lt;summary&gt;...&lt;/summary&gt;</code>: Summary for details<br>
+      <code>&lt;dialog&gt;...&lt;/dialog&gt;</code>: Dialog box<br>
+    </div>
+
+    <div class="box">
+      <h3>HTML Frames, Audio, Video & Others</h3>
+      <code>&lt;iframe&gt;...&lt;/iframe&gt;</code>: Inline Frame<br>
+      <code>&lt;audio&gt;...&lt;/audio&gt;</code>: Audio<br>
+      <code>&lt;video&gt;...&lt;/video&gt;</code>: Video<br>
+      <code>&lt;source /&gt;</code>: Media source<br>
+      <code>&lt;track /&gt;</code>: Subtitles track<br>
+      <code>&lt;embed /&gt;</code>: Embedded content<br>
+      <code>&lt;object&gt;...&lt;/object&gt;</code>: Embedded object<br>
+      <code>&lt;param /&gt;</code>: Parameter for object<br>
+    </div>
+  </div>
+</body>
+</html>

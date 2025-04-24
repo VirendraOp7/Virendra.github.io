@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Cheat Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .column {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      min-width: 300px;
+      max-width: 400px;
+      flex: 1;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      background-color: #009879;
+      color: white;
+      padding: 8px;
+      margin: 0 -10px 10px -10px;
+      border-radius: 5px 5px 0 0;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    td:first-child {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; color:#009879;">CSS Cheat Sheet</h1>
+  <div class="container">
+    <div class="column">
+      <div class="section">
+        <h3>Pseudo-selectors</h3>
+        <table>
+          <tr><td>:active</td><td>Adds style to active element</td></tr>
+          <tr><td>:after</td><td>Adds content after element</td></tr>
+          <tr><td>:before</td><td>Adds content before element</td></tr>
+          <tr><td>:first-child</td><td>Adds style to first child</td></tr>
+          <tr><td>:first-letter</td><td>Adds style to first character</td></tr>
+          <tr><td>:first-line</td><td>Adds style to first line</td></tr>
+          <tr><td>:focus</td><td>Adds style to focused element</td></tr>
+          <tr><td>:hover</td><td>Adds style when mouse is over</td></tr>
+          <tr><td>:link</td><td>Adds style to unvisited link</td></tr>
+          <tr><td>:visited</td><td>Adds style to visited link</td></tr>
+        </table>
+      </div>
+      <div class="section">
+        <h3>Text</h3>
+        <table>
+          <tr><td>font-family</td><td>Specifies the font family</td></tr>
+          <tr><td>font-size</td><td>Specifies the font size</td></tr>
+          <tr><td>font-style</td><td>normal | italic | oblique | inherit</td></tr>
+          <tr><td>font-variant</td><td>normal | small-caps | inherit</td></tr>
+          <tr><td>font-weight</td><td>normal | bold | lighter | bolder | 100-900 | inherit</td></tr>
+          <tr><td>color</td><td>Sets the color of text</td></tr>
+          <tr><td>line-height</td><td>normal | int | % | inherit</td></tr>
+          <tr><td>text-align</td><td>left | right | center | justify | inherit</td></tr>
+          <tr><td>text-decoration</td><td>none | underline | overline | line-through | blink | inherit</td></tr>
+          <tr><td>text-indent</td><td>int | % | inherit</td></tr>
+          <tr><td>text-transform</td><td>none | capitalize | uppercase | lowercase | inherit</td></tr>
+          <tr><td>vertical-align</td><td>int | % | baseline | sub | super | top | middle | bottom | text-top | text-bottom | inherit</td></tr>
+          <tr><td>white-space</td><td>normal | nowrap | pre | pre-line | pre-wrap | inherit</td></tr>
+          <tr><td>word-spacing</td><td>normal | length | inherit</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="column">
+      <div class="section">
+        <h3>Size and Colors</h3>
+        <table>
+          <tr><td>Relative sizes</td><td>em | rem | ex | ch | vw | vh | vmin | vmax | %</td></tr>
+          <tr><td>Absolute sizes</td><td>cm | mm | in | px | pt | pc</td></tr>
+          <tr><td>Colors</td><td>Hex #f00f, RGB rgb(255,0,255)</td></tr>
+        </table>
+      </div>
+      <div class="section">
+        <h3>Positioning</h3>
+        <table>
+          <tr><td>position</td><td>absolute | fixed | relative | static | inherit</td></tr>
+          <tr><td>float</td><td>left | right | none | inherit</td></tr>
+          <tr><td>top, right, bottom, left</td><td>Sets the offset from the edge</td></tr>
+          <tr><td>clear</td><td>left | right | both | none | inherit</td></tr>
+          <tr><td>display</td><td>Specifies element placing in the document flow</td></tr>
+          <tr><td>overflow</td><td>visible | hidden | scroll | auto | inherit</td></tr>
+          <tr><td>visibility</td><td>visible | hidden | collapse | inherit</td></tr>
+          <tr><td>z-index</td><td>auto | int | inherit</td></tr>
+        </table>
+      </div>
+      <div class="section">
+        <h3>Dimensions</h3>
+        <table>
+          <tr><td>height</td><td>auto | int | % | inherit</td></tr>
+          <tr><td>max-height</td><td>none | int | % | inherit</td></tr>
+          <tr><td>max-width</td><td>none | int | % | inherit</td></tr>
+          <tr><td>min-height</td><td>int | % | inherit</td></tr>
+          <tr><td>min-width</td><td>int | % | inherit</td></tr>
+          <tr><td>width</td><td>auto | int | % | inherit</td></tr>
+        </table>
+      </div>
+      <div class="section">
+        <h3>Other</h3>
+        <table>
+          <tr><td>background</td><td>Format: background (color) (image) (repeat) (position)</td></tr>
+          <tr><td>cursor</td><td>Set the type of cursor</td></tr>
+          <tr><td>quotes</td><td>Set type of quotation marks</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

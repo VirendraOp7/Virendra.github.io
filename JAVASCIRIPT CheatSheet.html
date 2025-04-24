@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Cheatsheet</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .category {
+    font-weight: bold;
+    color: #337ab7; /* Example primary color */
+  }
+
+  .syntax {
+    font-family: monospace;
+    color: #008000; /* Example green color for code */
+  }
+
+  .description {
+    color: #555;
+  }
+
+  .example {
+    font-family: monospace;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<h1>JavaScript Cheatsheet</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Syntax/Keyword/Method</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="category">Variables</td>
+      <td class="syntax"><code>let myVar;</code></td>
+      <td class="description">Declare a block-scoped variable (can be reassigned).</td>
+      <td class="example"><code>let count = 0;</code></td>
+    </tr>
+    <tr>
+      <td class="category">Variables</td>
+      <td class="syntax"><code>const MY_CONST = 10;</code></td>
+      <td class="description">Declare a block-scoped constant (cannot be reassigned).</td>
+      <td class="example"><code>const PI = 3.14;</code></td>
+    </tr>
+    <tr>
+      <td class="category">Variables</td>
+      <td class="syntax"><code>var oldVar;</code></td>
+      <td class="description">Declare a function-scoped variable (avoid in modern JS).</td>
+      <td class="example"><code>var message = "Hello";</code></td>
+    </tr>
+    <tr>
+      <td class="category">Data Types</td>
+      <td class="syntax"><code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>null</code>, <code>undefined</code>, <code>Symbol</code>, <code>BigInt</code></td>
+      <td class="description">Primitive data types.</td>
+      <td class="example"><code>"hello"</code>, <code>10</code>, <code>true</code>, <code>null</code>, <code>undefined</code>, <code>Symbol('id')</code>, <code>123n</code></td>
+    </tr>
+    <tr>
+      <td class="category">Data Types</td>
+      <td class="syntax"><code>Object {}</code>, <code>Array []</code>, <code>Function () {}</code></td>
+      <td class="description">Reference data types.</td>
+      <td class="example"><code>{ name: 'Alice', age: 30 }</code>, <code>[1, 2, 3]</code>, <code>function greet() {}</code></td>
+    </tr>
+    <tr>
+      <td class="category">Operators</td>
+      <td class="syntax"><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code>, <code>++</code>, <code>--</code></td>
+      <td class="description">Arithmetic operators.</td>
+      <td class="example"><code>5 + 2</code>, <code>10 - 3</code>, <code>4 * 6</code>, <code>15 / 3</code>, <code>7 % 3</code>, <code>2 ** 3</code>, <code>i++</code>, <code>j--</code></td>
+    </tr>
+    <tr>
+      <td class="category">Operators</td>
+      <td class="syntax"><code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>**=</code></td>
+      <td class="description">Assignment operators.</td>
+      <td class="example"><code>x = 5</code>, <code>y += 2</code>, <code>z -= 1</code>, <code>a *= 3</code></td>
+    </tr>
+    <tr>
+      <td class="category">Operators</td>
+      <td class="syntax"><code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></td>
+      <td class="description">Comparison operators.</td>
+      <td class="example"><code>5 == '5'</code>, <code>10 === 10</code>, <code>3 != 4</code>, <code>'a' !== 'A'</code>, <code>x &gt; y</code>, <code>a &lt;= b</code></td>
+    </tr>
+    <tr>
+      <td class="category">Operators</td>
+      <td class="syntax"><code>&&</code>, <code>||</code>, <code>!</code></td>
+      <td class="description">Logical operators (AND, OR, NOT).</td>
+      <td class="example"><code>true && false</code>, <code>a &gt; 5 || b &lt; 10</code>, <code>!isLoggedIn</code></td>
+    </tr>
+    <tr>
+      <td class="category">Operators</td>
+      <td class="syntax"><code>? :</code></td>
+      <td class="description">Ternary (conditional) operator.</td>
+      <td class="example"><code>const result = age >= 18 ? 'Adult' : 'Minor';</code></td>
+    </tr>
+    <tr>
+      <td class="category">Operators</td>
+      <td class="syntax"><code>typeof</code>, <code>instanceof</code></td>
+      <td class="description">Type operators.</td>
+      <td class="example"><code>typeof myVar</code>, <code>myArray instanceof Array</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>if (condition) {} else if {} else {}</code></td>
+      <td class="description">Conditional statements.</td>
+      <td class="example"><code>if (score > 90) { console.log('A'); } else { console.log('B'); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>switch (expression) { case ... }</code></td>
+      <td class="description">Switch statement for multiple conditions.</td>
+      <td class="example"><code>switch (day) { case 'Mon': console.log('Start'); break; default: ... }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>for (init; cond; incr) {}</code></td>
+      <td class="description">For loop.</td>
+      <td class="example"><code>for (let i = 0; i &lt; 5; i++) { console.log(i); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>while (condition) {}</code></td>
+      <td class="description">While loop.</td>
+      <td class="example"><code>let i = 0; while (i &lt; 3) { console.log(i++); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>do {} while (condition);</code></td>
+      <td class="description">Do...while loop (executes at least once).</td>
+      <td class="example"><code>let i = 0; do { console.log(i++); } while (i &lt; 2);</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>for (key in object) {}</code></td>
+      <td class="description">For...in loop (iterates over object properties).</td>
+      <td class="example"><code>for (let key in person) { console.log(key, person[key]); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>for (element of iterable) {}</code></td>
+      <td class="description">For...of loop (iterates over iterable objects like arrays, strings).</td>
+      <td class="example"><code>for (let num of numbers) { console.log(num); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>break;</code></td>
+      <td class="description">Exits a loop or switch statement.</td>
+      <td class="example"><code>for (let i = 0; i &lt; 10; i++) { if (i === 5) break; console.log(i); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Control Flow</td>
+      <td class="syntax"><code>continue;</code></td>
+      <td class="description">Skips the current iteration of a loop.</td>
+      <td class="example"><code>for (let i = 0; i &lt; 5; i++) { if (i === 3) continue; console.log(i); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>function myFunction(param1, param2) {}</code></td>
+      <td class="description">Function declaration.</td>
+      <td class="example"><code>function greet(name) { return 'Hello, ' + name; }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>const myFunction = function(params) {}</code></td>
+      <td class="description">Function expression.</td>
+      <td class="example"><code>const multiply = function(a, b) { return a * b; };</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>(param1, param2) => { ... }</code></td>
+      <td class="description">Arrow function (ES6+).</td>
+      <td class="example"><code>const add = (a, b) => a + b;</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>return value;</code></td>
+      <td class="description">Returns a value from a function.</td>
+      <td class="example"><code>return sum;</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>arguments</code></td>
+      <td class="description">Array-like object containing all arguments passed to a function (older).</td>
+      <td class="example"><code>function logArgs() { console.log(arguments); }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>...restParams</code></td>
+      <td class="description">Rest parameters (collect remaining arguments into an array) (ES6+).</td>
+      <td class="example"><code>function sumAll(...numbers) { ... }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Functions</td>
+      <td class="syntax"><code>param = defaultValue</code></td>
+      <td class="description">Default parameter value (ES6+).</td>
+      <td class="example"><code>function power(base, exponent = 2) { ... }</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>const myArray = [el1, el2, ...];</code></td>
+      <td class="description">Array literal.</td>
+      <td class="example"><code>const colors = ['red', 'green', 'blue'];</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>myArray[index]</code></td>
+      <td class="description">Accessing array elements by index (0-based).</td>
+      <td class="example"><code>console.log(colors[0]);</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>myArray.length</code></td>
+      <td class="description">Get the length of an array.</td>
+      <td class="example"><code>console.log(colors.length);</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>push()</code>, <code>pop()</code></td>
+      <td class="description">Add/remove elements from the end.</td>
+      <td class="example"><code>colors.push('yellow');</code>, <code>const last = colors.pop();</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>unshift()</code>, <code>shift()</code></td>
+      <td class="description">Add/remove elements from the beginning.</td>
+      <td class="example"><code>colors.unshift('purple');</code>, <code>const first = colors.shift();</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>splice(start, deleteCount, ...items)</code></td>
+      <td class="description">Add/remove elements at any position.</td>
+      <td class="example"><code>colors.splice(1, 1, 'orange', 'white');</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>slice(start, end)</code></td>
+      <td class="description">Returns a portion of an array.</td>
+      <td class="example"><code>const newArray = colors.slice(1, 3);</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>concat(arr2, ...)</code></td>
+      <td class="description">Joins two or more arrays.</td>
+      <td class="example"><code>const combined = colors.concat([1, 2]);</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>indexOf(item)</code>, <code>lastIndexOf(item)</code></td>
+      <td class="description">Find the first/last index of an element.</td>
+      <td class="example"><code>colors.indexOf('green')</code>, <code>colors.lastIndexOf('blue')</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>includes(item)</code></td>
+      <td class="description">Checks if an array contains an element (ES6+).</td>
+      <td class="example"><code>colors.includes('red')</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>join(separator)</code></td>
+      <td class="description">Joins array elements into a string.</td>
+      <td class="example"><code>const str = colors.join(', ');</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>reverse()</code></td>
+      <td class="description">Reverses the order of elements (in place).</td>
+      <td class="example"><code>colors.reverse();</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>sort(compareFn)</code></td>
+      <td class="description">Sorts the elements (in place).</td>
+      <td class="example"><code>numbers.sort((a, b) => a - b);</code></td>
+    </tr>
+    <tr>
+      <td class="category">Arrays</td>
+      <td class="syntax"><code>forEach(callback)</code></td>
+      <td class="description">Executes a provided function once for each element.</td>
+      <td class="example"><code>colors.forEach(color => console.log(color));</code></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
